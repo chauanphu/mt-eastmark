@@ -7,7 +7,7 @@ import {
 
 const Footer = () => {
     return (
-        <footer>
+        <footer id="footer">
             <Box>
                 <Box sx={{
                     py: 3,

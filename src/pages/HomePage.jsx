@@ -170,7 +170,8 @@ const HomePage = () => {
             </Container>
             {/* End Location */}
 
-            <Box id="introduction" sx={{
+            {/* Benefit */}
+            <Box id="benefit" sx={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -210,9 +211,10 @@ const HomePage = () => {
 
                 </Box>
             </Container>
+            {/* End Benefit */}
 
-            {/* Location */}
-            <Box sx={{
+            {/* Area */}
+            <Box id="area" sx={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -232,10 +234,10 @@ const HomePage = () => {
             }}>
                 <Box component="img" src={mat_bang_3} alt="Mat" sx={{ width: "100%" }} />
             </Container>
-            {/* End Location */}
+            {/* End Area */}
 
             {/* Payment */}
-            <Box sx={{
+            <Box id="payment" sx={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -246,8 +248,7 @@ const HomePage = () => {
             }}>
                 <Typography variant="h5">THANH TOÁN</Typography>
             </Box>
-
-            <Container id="location" sx={{
+            <Container sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',
@@ -258,7 +259,7 @@ const HomePage = () => {
             {/* End Payment */}
 
             {/* Real Image */}
-            <Box id="real-image" sx={{
+            <Box id="real-img" sx={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -270,7 +271,7 @@ const HomePage = () => {
                 <Typography variant="h5">HÌNH ẢNH THỰC TẾ
                 </Typography>
             </Box>
-            <Container id="location" sx={{
+            <Container sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',
@@ -280,8 +281,8 @@ const HomePage = () => {
             </Container>
             {/* End Real Image */}
 
-            {/* Real Image */}
-            <Box id="real-image" sx={{
+            {/* Model */}
+            <Box id="model" sx={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -293,7 +294,7 @@ const HomePage = () => {
                 <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">NHÀ MẪU
                 </Typography>
             </Box>
-            <Container id="location" sx={{
+            <Container sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',

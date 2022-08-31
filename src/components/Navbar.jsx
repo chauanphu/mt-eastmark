@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { AppBar, Toolbar, Tabs, Tab, Stack, Typography, Skeleton, IconButton, Drawer } from "@mui/material";
-import { Link } from "react-router-dom";
+import { AppBar, Toolbar, Tabs, Tab, Skeleton, IconButton, Drawer } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 
 import Dropdown from './Dropdown';
@@ -30,24 +29,21 @@ const Navbar = () => {
         {
             name: 'Vị trí', url: '#location', value: '1', style: style
         }, {
-            name: 'Tiện ích', url: '#introduction', value: '2', style: style
+            name: 'Tiện ích', url: '#benefit', value: '2', style: style
         },
         {
-            name: 'Vị trí', url: '#location', value: '3', style: style
+            name: 'Mặt bằng', url: '#area', value: '4', style: style
         },
         {
-            name: 'Mặt bằng', url: '#introduction', value: '4', style: style
-        },
-        {
-            name: 'Thanh toán', url: '#location', value: '5', style: style
+            name: 'Thanh toán', url: '#payment', value: '5', style: style
         }, {
-            name: 'Hình ảnh thực tế', url: '#introduction', value: '6', style: style
+            name: 'Hình ảnh thực tế', url: '#real-img', value: '6', style: style
         },
         {
-            name: 'Nhà mẫu', url: '#location', value: '7', style: style
+            name: 'Nhà mẫu', url: '#model', value: '7', style: style
         },
         {
-            name: 'Liên hệ', url: '#location', value: '8', style: style
+            name: 'Liên hệ', url: '#footer', value: '8', style: style
         },
     ]
     return (
