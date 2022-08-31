@@ -96,7 +96,7 @@ const HomePage = () => {
             {/* End Introduction */}
 
             {/* Location */}
-            <Box sx={{
+            <Box id="location" sx={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",

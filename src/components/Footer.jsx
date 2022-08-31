@@ -2,25 +2,13 @@ import { Box, Typography, Grid, Container, List, ListItem, ListItemText, ListIte
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import {
-    green, grey, blueGrey
+    grey, blueGrey
 } from "@mui/material/colors"
 
 const Footer = () => {
     return (
         <footer>
             <Box>
-                <Box sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    mt: 5,
-                    py: 5,
-                    backgroundColor: green[800]
-                }}>
-                    <Typography textAlign="center" sx={{
-                        typography: { xs: "h5", md: "h4" }
-                    }}>Công ty TNHH Thương mại Dệt may Trần Gia Phát</Typography>
-                </Box>
                 <Box sx={{
                     py: 3,
                     backgroundColor: grey[900]
@@ -87,7 +75,7 @@ const Footer = () => {
                 backgroundColor: blueGrey
                 [900]
             }}>
-                <Typography color="white" textAlign="center">Bản quyền thuộc CTY TNHH Thương mại Dệt may Trần Gia Phát || thiết kế bởi CAP</Typography>
+                <Typography color="white" textAlign="center"> © 2022 || Công ty TNHH Châu Gia Phát</Typography>
             </Box>
         </footer>
     )

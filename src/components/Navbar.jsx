@@ -56,7 +56,7 @@ const Navbar = () => {
             <AppBar sx={{
                 height: "80px",
                 backgroundColor: 'white',
-                position: 'relative',
+                position: 'fixed',
                 display: 'flex',
                 justifyContent: 'center'
             }}>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 }}>
                     <Tabs value={tabvalue} onChange={handleTabChange}>
                         {tabs.map((tab) => (
-                            <Tab key={tab.value} component={Link} to={tab.url} label={tab.name} value={tab.value} sx={{
+                            <Tab key={tab.value} component="a" href={tab.url} label={tab.name} value={tab.value} sx={{
                                 typography: {
                                     md: 'h6'
                                 },
