@@ -5,13 +5,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import Dropdown from './Dropdown';
 //Import State
-import Category from '../services/category'
-import { useEffect } from 'react';
 
 const Navbar = () => {
     const [tabvalue, setTab] = useState('0');
     const [drawer, setDrawer] = useState(false)
-    const [categories, setCategory] = useState([])
 
     const handleTabChange = (event, newValue) => {
         setDrawer(false)
@@ -26,18 +23,9 @@ const Navbar = () => {
         py: 0.5,
     }
 
-    useEffect(() => {
-        Category.get_all()
-            .then(res => {
-                return res.json()
-            })
-            .then(data => {
-                setCategory(data)
-            })
-    }, [])
     const tabs = [
         {
-            name: 'San pham', url: '/', value: '0', style: style, sub_items: categories
+            name: 'San pham', url: '/', value: '0', style: style
         },
         // { label: 'San pham', url: '/products', value: '1' },
         {

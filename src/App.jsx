@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import HomePage from "./pages/Home/HomePage";
-import ShopPage from './pages/ShopPage'
+import HomePage from './pages/HomePage'
 import ProductDetailPage from './pages/ProductDetailPage'
 import CategoryPage from './pages/CategoryPage'
 import NotFoundPage from "./pages/NotFound";
@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<ShopPage />}>
+        <Route exact path="/" element={<HomePage />}>
           <Route path="/" element={<CategoryPage />} />
           <Route path="/category/:id" element={<CategoryPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
