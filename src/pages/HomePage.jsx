@@ -1,12 +1,16 @@
 import React from 'react'
 import { Box } from '@mui/system'
 import { Typography, Container, Grid, Stack } from '@mui/material'
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 import { Carousel } from '../components'
 import { orange, grey } from '@mui/material/colors';
 import { Navbar, Footer } from "../components";
 
 import panel from '../assets/Panel-2.png'
 import mat_bang from '../assets/Mat_Bang.png'
+import mat_bang_3 from '../assets/Mat_Bang_3.JPG'
+import payment from '../assets/payment.jpg'
 
 var utils_image = []
 
@@ -20,6 +24,19 @@ var utils_text = [
     ["Khu dịch vụ", "Khu cafe", "Khu hồ cảnh quan 7.000 m2", "Khu đồi cảnh", "Khu vui chơi ngoài trời của bé", "Công viên ven sông", "Trường học, trường mầm non", "Shophouse"],
     ["TTMT, dịch vụ, Officetel", "Hồ bơi nghỉ dưỡng", "Khu tắm nắng", "Khu chăm sóc sức khỏe", "Phòng sinh hoạt cộng đồng", "Nhà hàng, cafe ven sông"]
 ]
+
+var real_imgs = []
+for (let i = 1; i <= 8; i++) {
+    var real_img = require('../assets/real_img/' + i + '.jpg')
+    real_imgs.push(<Box component="img" src={real_img} alt="Hinh anh thuc te" sx={{ width: "100%" }} />,)
+}
+
+var models = []
+for (let i = 1; i <= 6; i++) {
+    var model = require('../assets/models/' + i + '.jpg')
+    models.push(model)
+}
+
 const HomePage = () => {
     const introduction = [
         { key: "Vị trí", value: "Vành đai 3 – Lò Lu, P. Long Trường, TP Thủ Đức, TP HCM" },
@@ -39,16 +56,17 @@ const HomePage = () => {
     ]
     return (
         <>
+            {/* Navbar */}
             <Navbar></Navbar>
 
-            {/* Carousel */}
+            {/* Panel */}
             <Container sx={{
                 minWidth: '100%',
             }}>
                 <img src={panel} alt="Panel" width="100%" />
             </Container>
 
-            {/* Product Category */}
+            {/* Introduction */}
             <Box id="introduction" sx={{
                 display: "flex",
                 alignItems: "center",
@@ -75,8 +93,10 @@ const HomePage = () => {
                     })}
                 </Stack>
             </Container>
+            {/* End Introduction */}
 
-            <Box id="introduction" sx={{
+            {/* Location */}
+            <Box sx={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -148,6 +168,7 @@ const HomePage = () => {
                     </Box>
                 </Box>
             </Container>
+            {/* End Location */}
 
             <Box id="introduction" sx={{
                 display: "flex",
@@ -189,6 +210,110 @@ const HomePage = () => {
 
                 </Box>
             </Container>
+
+            {/* Location */}
+            <Box sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                mt: 5,
+                mb: 2,
+                py: 5,
+                backgroundColor: orange[50],
+            }}>
+                <Typography variant="h5">MẶT BẰNG DỰ ÁN</Typography>
+            </Box>
+
+            <Container id="location" sx={{
+                width: { xs: "100%", md: "60%" },
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'column'
+            }}>
+                <Box component="img" src={mat_bang_3} alt="Mat" sx={{ width: "100%" }} />
+            </Container>
+            {/* End Location */}
+
+            {/* Payment */}
+            <Box sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                mt: 5,
+                mb: 2,
+                py: 5,
+                backgroundColor: orange[50],
+            }}>
+                <Typography variant="h5">THANH TOÁN</Typography>
+            </Box>
+
+            <Container id="location" sx={{
+                width: { xs: "100%", md: "60%" },
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'column'
+            }}>
+                <Box component="img" src={payment} alt="Thanh toan" sx={{ width: "100%" }} />
+            </Container>
+            {/* End Payment */}
+
+            {/* Real Image */}
+            <Box id="real-image" sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                mt: 5,
+                mb: 2,
+                py: 5,
+                backgroundColor: orange[50],
+            }}>
+                <Typography variant="h5">HÌNH ẢNH THỰC TẾ
+                </Typography>
+            </Box>
+            <Container id="location" sx={{
+                width: { xs: "100%", md: "60%" },
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'column'
+            }}>
+                <Carousel items={real_imgs} />
+            </Container>
+            {/* End Real Image */}
+
+            {/* Real Image */}
+            <Box id="real-image" sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                mt: 5,
+                mb: 2,
+                py: 5,
+                backgroundColor: orange[50],
+            }}>
+                <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">NHÀ MẪU
+                </Typography>
+            </Box>
+            <Container id="location" sx={{
+                width: { xs: "100%", md: "60%" },
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'column'
+            }}>
+                <Box width="100%" marginTop={2}>
+                    <ImageList sx={{ width: "100%", height: 600 }} gap={12} cols={3}>
+                        {models.map((item, index) => (
+                            <ImageListItem key={index}>
+                                <img
+                                    src={item}
+                                    alt={"Nha Mau"}
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
+
+                </Box>
+            </Container>
+            {/* End Real Image */}
             <Footer />
 
         </>
