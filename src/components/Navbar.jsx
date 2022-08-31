@@ -25,29 +25,33 @@ const Navbar = () => {
 
     const tabs = [
         {
-            name: 'San pham', url: '/', value: '0', style: style
+            name: 'Giới thiệu', url: '#introduction', value: '0', style: style
         },
-        // { label: 'San pham', url: '/products', value: '1' },
         {
-            name: 'Lien lac', url: '/contact', value: '1', style: style
+            name: 'Vị trí', url: '#location', value: '1', style: style
+        }, {
+            name: 'Tiện ích', url: '#introduction', value: '2', style: style
+        },
+        {
+            name: 'Vị trí', url: '#location', value: '3', style: style
+        },
+        {
+            name: 'Mặt bằng', url: '#introduction', value: '4', style: style
+        },
+        {
+            name: 'Thanh toán', url: '#location', value: '5', style: style
+        }, {
+            name: 'Hình ảnh thực tế', url: '#introduction', value: '6', style: style
+        },
+        {
+            name: 'Nhà mẫu', url: '#location', value: '7', style: style
+        },
+        {
+            name: 'Liên hệ', url: '#location', value: '8', style: style
         },
     ]
     return (
         <>
-            <AppBar sx={{
-                height: "30px",
-                backgroundColor: 'gray',
-                position: 'static',
-            }}>
-                <Stack direction="row" spacing={2} sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                }}>
-                    <Typography variant="body2">SĐT: 0945 316 280</Typography>
-                    <Typography variant="body2">Mở cửa từ 7:00 - 17:00 từ T2 - T6</Typography>
-                </Stack>
-            </AppBar>
             {/* Navbar */}
             <AppBar sx={{
                 height: "80px",

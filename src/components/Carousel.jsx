@@ -8,35 +8,27 @@ import "swiper/css/pagination";
 
 import './swiper-style.css'
 // import required modules
-import { Pagination } from "swiper";
-
-import ProductCard from "./Cards/ProductCard";
+import { Pagination, Navigation } from "swiper";
 
 export default function Carousel({ items }) {
     return (
         <>
             <Swiper
                 slidesPerView={1}
-                spaceBetween={10}
+                spaceBetween={30}
+                loop={true}
                 pagination={{
                     clickable: true,
                 }}
-                breakpoints={{
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 40,
-                    },
-
-                }}
-                modules={[Pagination]}
+                navigation={true}
+                modules={[Pagination, Navigation]}
                 className="mySwiper"
             >
                 {items.map((item) => {
-                    return (<SwiperSlide key={item.id}><ProductCard item={item} /></SwiperSlide>)
+                    return (
+                        <SwiperSlide key={item.props.src} >
+                            {item}
+                        </SwiperSlide>)
                 })}
             </Swiper>
         </>
