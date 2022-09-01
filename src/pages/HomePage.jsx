@@ -1,5 +1,8 @@
 import React from 'react'
 import { Box } from '@mui/system'
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 import { Typography, Container, Grid, Stack, Fab, SvgIcon } from '@mui/material'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
@@ -66,6 +69,8 @@ const HomePage = () => {
         { key: "Pháp lý", value: "Sổ hồng sở hữu lâu dài (đã có GPXD)" },
     ]
 
+    const theme = useTheme();
+    const pc = useMediaQuery(theme.breakpoints.up('md'));
     return (
         <>
             {/* Navbar */}
@@ -313,7 +318,7 @@ const HomePage = () => {
                 flexDirection: 'column'
             }}>
                 <Box width="100%" marginTop={2}>
-                    <ImageList sx={{ width: "100%", height: 600 }} gap={12} cols={3}>
+                    <ImageList sx={{ width: "100%", height: 600 }} gap={12} cols={pc ? 3 : 1}>
                         {models.map((item, index) => (
                             <ImageListItem key={index}>
                                 <img

@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { AppBar, Toolbar, Tabs, Tab, Skeleton, IconButton, Drawer } from "@mui/material";
+import { AppBar, Toolbar, Tabs, Tab, Box, IconButton, Drawer } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-
+import logo from '../assets/logo-extended.png'
 
 //Import State
 import Dropdown from './Dropdown';
@@ -70,15 +70,15 @@ const Navbar = () => {
                 }}>
                     <MenuIcon />
                 </IconButton>
-                <Skeleton sx={{
-                    width: 100,
+                <Box component="img" src={logo} alt="Logo" sx={{
+                    maxWidth: 200,
                     height: 70,
                     position: { xs: 'absolute', md: 'block' },
                     margin: { xs: 'auto', md: '0 0 0 50px' },
                     ml: 5,
                     left: 0,
                     right: 0,
-                }}></Skeleton>
+                }}></Box>
                 {
                     pc && (<Toolbar sx={{
                         width: 'fit-content',
