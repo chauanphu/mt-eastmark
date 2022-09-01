@@ -9,7 +9,6 @@ const LoginPage = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        const blog = { username, password }
         navigate("/admin")
     }
 
