@@ -88,7 +88,7 @@ const HomePage = () => {
                 py: 5,
                 backgroundColor: orange[50],
             }}>
-                <Typography variant="h5">GIỚI THIỆU TỔNG QUAN DỰ ÁN</Typography>
+                <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">GIỚI THIỆU TỔNG QUAN DỰ ÁN</Typography>
             </Box>
 
             <Container sx={{ mt: 5 }}>
@@ -117,7 +117,7 @@ const HomePage = () => {
                 py: 5,
                 backgroundColor: orange[50],
             }}>
-                <Typography variant="h5">VỊ TRÍ ĐẮC ĐỊA</Typography>
+                <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">VỊ TRÍ ĐẮC ĐỊA</Typography>
             </Box>
 
             <Container id="location" sx={{
@@ -192,7 +192,7 @@ const HomePage = () => {
                 py: 5,
                 backgroundColor: orange[50],
             }}>
-                <Typography variant="h5">TIỆN ÍCH DỰ ÁN</Typography>
+                <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">TIỆN ÍCH DỰ ÁN</Typography>
             </Box>
             <Container id="location" sx={{
                 width: { xs: "100%", md: "60%" },
@@ -235,7 +235,7 @@ const HomePage = () => {
                 py: 5,
                 backgroundColor: orange[50],
             }}>
-                <Typography variant="h5">MẶT BẰNG DỰ ÁN</Typography>
+                <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">MẶT BẰNG DỰ ÁN</Typography>
             </Box>
 
             <Container id="location" sx={{
@@ -258,7 +258,7 @@ const HomePage = () => {
                 py: 5,
                 backgroundColor: orange[50],
             }}>
-                <Typography variant="h5">THANH TOÁN</Typography>
+                <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">THANH TOÁN</Typography>
             </Box>
             <Container sx={{
                 width: { xs: "100%", md: "60%" },
@@ -280,7 +280,7 @@ const HomePage = () => {
                 py: 5,
                 backgroundColor: orange[50],
             }}>
-                <Typography variant="h5">HÌNH ẢNH THỰC TẾ
+                <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">HÌNH ẢNH THỰC TẾ
                 </Typography>
             </Box>
             <Container sx={{
@@ -346,10 +346,8 @@ const HomePage = () => {
                         )
                     }} />
                 </Fab>
-                <Fab component="a" href="tel:0927933864" aria-label="add" sx={{ mb: 2, color: 'white', backgroundColor: 'red' }}>
-                    <a href="tel: 0927933864">
-                        <LocalPhoneIcon />
-                    </a>
+                <Fab component="a" href="tel:0909049996" aria-label="add" sx={{ mb: 2, color: 'white', backgroundColor: 'red' }}>
+                    <LocalPhoneIcon />
                 </Fab>
                 <Fab color="warning" aria-label="add">
                     <ZaloIcon fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="100px" height="100px" onClick={() => {

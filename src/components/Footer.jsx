@@ -65,13 +65,13 @@ const Footer = () => {
                                     <ListItem>
                                         <ListItemIcon sx={{ color: "white" }}><PhoneIcon /></ListItemIcon>
                                         <ListItemText variant="body1">
-                                            0945 316 280
+                                            0909 049 996
                                         </ListItemText>
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon sx={{ color: "white" }}><ZaloIcon fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="100px" height="100px" /></ListItemIcon>
                                         <ListItemText variant="body1">
-                                            0945 316 280
+                                            0909 049 996
                                         </ListItemText>
                                     </ListItem>
                                     <ListItem>

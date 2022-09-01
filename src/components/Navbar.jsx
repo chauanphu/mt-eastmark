@@ -1,13 +1,19 @@
 import { useState } from 'react';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 import { AppBar, Toolbar, Tabs, Tab, Skeleton, IconButton, Drawer } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 
-import Dropdown from './Dropdown';
+
 //Import State
+import Dropdown from './Dropdown';
 
 const Navbar = () => {
     const [tabvalue, setTab] = useState('0');
     const [drawer, setDrawer] = useState(false)
+    const theme = useTheme();
+    const pc = useMediaQuery(theme.breakpoints.up('md'));
 
     const handleTabChange = (event, newValue) => {
         setDrawer(false)
@@ -46,13 +52,14 @@ const Navbar = () => {
             name: 'Liên hệ', url: '#footer', value: '8', style: style
         },
     ]
+
     return (
         <>
             {/* Navbar */}
             <AppBar sx={{
                 height: "80px",
                 backgroundColor: 'white',
-                position: 'fixed',
+                position: 'sticky',
                 display: 'flex',
                 justifyContent: 'center'
             }}>
@@ -72,29 +79,31 @@ const Navbar = () => {
                     left: 0,
                     right: 0,
                 }}></Skeleton>
-                <Toolbar sx={{
-                    width: 'fit-content',
-                    visibility: {
-                        xs: 'hidden',
-                        md: 'visible',
-                    },
-                    position: 'absolute',
-                    margin: 'auto',
-                    left: 0,
-                    right: 0,
-                }}>
-                    <Tabs value={tabvalue} onChange={handleTabChange}>
-                        {tabs.map((tab) => (
-                            <Tab key={tab.value} component="a" href={tab.url} label={tab.name} value={tab.value} sx={{
-                                typography: {
-                                    md: 'h6'
-                                },
-                                color: 'green'
-                            }} />
-                        )
-                        )}
-                    </Tabs>
-                </Toolbar>
+                {
+                    pc && (<Toolbar sx={{
+                        width: 'fit-content',
+                        display: {
+                            xs: 'none',
+                            md: 'block',
+                        },
+                        position: 'absolute',
+                        margin: 'auto',
+                        left: 0,
+                        right: 0,
+                    }}>
+                        <Tabs value={tabvalue} onChange={handleTabChange}>
+                            {tabs.map((tab) => (
+                                <Tab key={tab.value} component="a" href={tab.url} label={tab.name} value={tab.value} sx={{
+                                    typography: {
+                                        md: 'h6'
+                                    },
+                                    color: 'green'
+                                }} />
+                            )
+                            )}
+                        </Tabs>
+                    </Toolbar>)
+                }
             </AppBar>
             <Drawer anchor='left' open={drawer} onClose={event => toggleDrawer(event, false)} sx={{ px: 2 }}>
                 <Dropdown items={tabs} />

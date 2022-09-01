@@ -32,6 +32,7 @@
     "build": "react-scripts build",
     "server": "json-server --watch db/db.json --port 8000",
     "dev": "concurrently \"npm run server \" \"npm run start\"",
+    "deploy": "npm run build && firebase deploy",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
