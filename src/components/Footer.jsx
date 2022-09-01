@@ -1,18 +1,14 @@
 import React from 'react';
-import emailjs from 'emailjs-com';
 
-import { Box, Typography, Grid, Container, List, ListItem, ListItemText, ListItemIcon, SvgIcon, FormGroup, TextField, Button, InputAdornment } from "@mui/material"
+import { Box, Typography, Grid, Container, List, ListItem, ListItemText, ListItemIcon, SvgIcon } from "@mui/material"
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import {
     grey, blueGrey
 } from "@mui/material/colors"
 
-import { useState } from "react"
 
-const SERVICE_ID = "service_uq2oteh"
-const TEMPLATE_ID = "template_5uj1vsq"
-const PUBLIC_KEY = 'jLgP61qPVm5XZ6mpz'
+import Form from './Form';
 
 const Footer = () => {
     const ZaloIcon = (props) => {
@@ -22,30 +18,6 @@ const Footer = () => {
             </SvgIcon>
         );
     }
-
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [phone, setPhone] = useState("")
-    const [content, setContent] = useState("")
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        var templateParams = {
-            content: content,
-            phone: phone,
-            name: name,
-            email: email,
-        }
-        emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
-            .then(() => {
-                alert('Gửi email thành công')
-            })
-            .catch(err => {
-                alert('Gửi email thất bại. Vui lòng thử lại')
-                console.log(err)
-            });
-    };
 
     return (
         <footer id="footer">
@@ -77,7 +49,7 @@ const Footer = () => {
                                     <ListItem>
                                         <ListItemIcon sx={{ color: "white" }}><EmailIcon /></ListItemIcon>
                                         <ListItemText variant="body1">
-                                            phuclinh@baoholaodong.com
+                                            bdslamvu@gmail.com
                                         </ListItemText>
                                     </ListItem>
                                 </List>
@@ -89,29 +61,13 @@ const Footer = () => {
                                         Vành đai 3 – Lò Lu, P. Long Trường, TP Thủ Đức, TP HCM
                                     </ListItemText>
                                     <ListItemText sx={{ my: 2 }}>
-                                        <iframe
-                                            title="google-map"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d489.8298203115496!2d106.60610188976361!3d10.838947415056875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a4a74b55809%3A0xa1c2b8a88cdedec7!2sC%C3%94NG%20TY%20TNHH%20SX%20TM%20DV%20CH%C3%82U%20GIA%20PH%C3%81T!5e0!3m2!1sen!2s!4v1661824687577!5m2!1sen!2s" sx={{
-                                                border: 0
-                                            }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                                        <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1959.3199452520882!2d106.606282!3d10.838846000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa1c2b8a88cdedec7!2sC%C3%94NG%20TY%20TNHH%20SX%20TM%20DV%20CH%C3%82U%20GIA%20PH%C3%81T!5e0!3m2!1sen!2sus!4v1662005752380!5m2!1sen!2sus" width="350" height="300" style={{ border: 0, allowFullScreen: "", loading: "lazy", referrerPolicy: "no-referrer-when-downgrade" }}></iframe>
                                     </ListItemText>
                                 </List>
                             </Grid>
                             <Grid sx={{ mt: 2, my: 2, width: '100%' }} item lg={4}>
                                 <Typography sx={{ color: 'green', mb: 2 }} variant="h5">Form</Typography>
-                                <form onSubmit={sendEmail}>
-                                    <FormGroup variant="standard">
-                                        <TextField variant="filled" sx={{ backgroundColor: 'white' }} value={name} label="Tên" onChange={(e) => { setName(e.target.value) }} />
-                                        <TextField variant="filled" sx={{ backgroundColor: 'white' }} value={email} margin="normal" label="Email" onChange={(e) => { setEmail(e.target.value) }} />
-                                        <TextField variant="filled" sx={{ backgroundColor: 'white' }} InputProps={{
-                                            startAdornment: <InputAdornment position="start">(+84)</InputAdornment>,
-                                        }} value={phone} margin="normal" label="SĐT" onChange={(e) => { setPhone(e.target.value) }} />
-
-                                        <TextField variant="filled" sx={{ backgroundColor: 'white' }} rows={5} multiline value={content} margin="normal" label="Nội dung" onChange={(e) => { setContent(e.target.value) }} />
-
-                                        <Button type="submit" variant="outlined" sx={{ backgroundColor: 'blue', py: 1.5, color: 'white', borderColor: "blue" }}>Gửi email</Button>
-                                    </FormGroup>
-                                </form>
+                                <Form />
                             </Grid>
                         </Grid>
                     </Container>
@@ -127,7 +83,7 @@ const Footer = () => {
             }}>
                 <Typography color="white" textAlign="center"> © 2022 || Công ty TNHH Châu Gia Phát</Typography>
             </Box>
-        </footer>
+        </footer >
     )
 }
 

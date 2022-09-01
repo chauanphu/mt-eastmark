@@ -6,7 +6,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Typography, Container, Grid, Stack, Fab, SvgIcon } from '@mui/material'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { Carousel } from '../components'
+import { Carousel, MyModal } from '../components'
 import { orange, grey } from '@mui/material/colors';
 import { Navbar, Footer } from "../components";
 
@@ -71,6 +71,7 @@ const HomePage = () => {
 
     const theme = useTheme();
     const pc = useMediaQuery(theme.breakpoints.up('md'));
+
     return (
         <>
             {/* Navbar */}
@@ -125,7 +126,7 @@ const HomePage = () => {
                 <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">VỊ TRÍ ĐẮC ĐỊA</Typography>
             </Box>
 
-            <Container id="location" sx={{
+            <Container sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',
@@ -199,7 +200,8 @@ const HomePage = () => {
             }}>
                 <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">TIỆN ÍCH DỰ ÁN</Typography>
             </Box>
-            <Container id="location" sx={{
+
+            <Container sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',
@@ -243,7 +245,7 @@ const HomePage = () => {
                 <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">MẶT BẰNG DỰ ÁN</Typography>
             </Box>
 
-            <Container id="location" sx={{
+            <Container sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',
@@ -334,6 +336,8 @@ const HomePage = () => {
             {/* End Real Image */}
             <Footer />
 
+            <MyModal />
+            {/* FAB */}
             <Box sx={{
                 margin: 0,
                 top: 'auto',
@@ -356,7 +360,7 @@ const HomePage = () => {
                 </Fab>
                 <Fab color="warning" aria-label="add">
                     <ZaloIcon fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="100px" height="100px" onClick={() => {
-                        window.open('https://zalo.me/0927933864')
+                        window.open('https://zalo.me/0909049996')
                     }}></ZaloIcon>
                 </Fab>
             </Box>
