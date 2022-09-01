@@ -13,7 +13,8 @@ const Navbar = () => {
     const [tabvalue, setTab] = useState('0');
     const [drawer, setDrawer] = useState(false)
     const theme = useTheme();
-    const pc = useMediaQuery(theme.breakpoints.up('md'));
+    const break_nav = useMediaQuery('(min-width: 1600px)')
+    const pc = useMediaQuery(theme.breakpoints.up('xl'));
 
     const handleTabChange = (event, newValue) => {
         setDrawer(false)
@@ -23,7 +24,7 @@ const Navbar = () => {
         setDrawer(newValue)
     }
     const style = {
-        typography: 'h6',
+        fontSize: break_nav ? '1.2em' : '1em',
         color: 'green',
         py: 0.5,
     }
@@ -65,16 +66,16 @@ const Navbar = () => {
             }}>
                 {/* Logo */}
                 <IconButton size="large" onClick={event => toggleDrawer(event, true)} sx={{
-                    display: { md: 'none' },
+                    display: { xl: 'none' },
                     position: 'absolute',
                 }}>
                     <MenuIcon />
                 </IconButton>
                 <Box component="img" src={logo} alt="Logo" sx={{
-                    maxWidth: 200,
+                    width: 200,
                     height: 70,
-                    position: { xs: 'absolute', md: 'block' },
-                    margin: { xs: 'auto', md: '0 0 0 50px' },
+                    position: { xs: 'absolute', xl: 'block' },
+                    margin: { xs: 'auto', xl: '0 0 0 50px' },
                     ml: 5,
                     left: 0,
                     right: 0,
@@ -84,7 +85,7 @@ const Navbar = () => {
                         width: 'fit-content',
                         display: {
                             xs: 'none',
-                            md: 'block',
+                            xl: 'block',
                         },
                         position: 'absolute',
                         margin: 'auto',
@@ -93,12 +94,7 @@ const Navbar = () => {
                     }}>
                         <Tabs value={tabvalue} onChange={handleTabChange}>
                             {tabs.map((tab) => (
-                                <Tab key={tab.value} component="a" href={tab.url} label={tab.name} value={tab.value} sx={{
-                                    typography: {
-                                        md: 'h6'
-                                    },
-                                    color: 'green'
-                                }} />
+                                <Tab key={tab.value} component="a" href={tab.url} label={tab.name} value={tab.value} sx={tab.style} />
                             )
                             )}
                         </Tabs>

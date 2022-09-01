@@ -16,7 +16,6 @@ const My_Modal = () => {
         window.addEventListener('scroll', () => {
             const lim = pc ? [5000, 6000] : [4300, 5300]
 
-            console.log(window.scrollY)
             if (window.scrollY >= lim[0] && window.scrollY <= lim[1]) {
                 setShowModal(true);
             } else {
