@@ -5,7 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { Typography, Fab, SvgIcon } from '@mui/material'
 import { MyModal } from '../components'
-import { orange } from '@mui/material/colors';
+import { red } from '@mui/material/colors';
 import { Navbar, Footer } from "../components";
 
 /////// Custom Sections ///////
@@ -22,18 +22,21 @@ import payment from '../assets/payment.jpg'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 const introduction = [
-    { key: 'Tên dự án', value: 'IMPERIUM NHA TRANG', value_style: { fontWeight: 'bold', color: orange[900] } },
-    { key: "Vị trí", value: "16 Đường Phước Long, Phường Phước Long, Thành Phố Nha Trang, Tỉnh Khánh Hòa" },
-    { key: "Chủ đầu tư", value: "Công ty Cổ phần Đầu tư Xây dựng Đông Dương Nha Trang (Indochine Nha Trang)" },
-    { key: "Đơn vị phát triển", value: "Coteccons" },
-    { key: "Ngân hàng hỗ trợ vay vốn", value: "Vietinbank" },
-    { key: "Loại hình phát triển", value: "Shopvilla và căn hộ cao cấp" },
-    { key: "Quy mô dự án", value: "41 shopvillas thấp tầng và 1 tòa căn hộ chung cư cao cấp cao 39 tầng với 561 căn hộ (3 tầng hầm, 3 tầng khối đế thương mại, 36 tầng căn hộ)" },
-    { key: "Số lượng căn hộ:", value: "561 căn" },
-    { key: "Diện tích căn hộ", value: "37 – 116m2 (từ 1 đến 3 ngủ)" },
-    { key: "Thời gian khởi công", value: "2021" },
-    { key: "Thời gian bàn giao dự kiến", value: "Quý II/2023" },
-    { key: "Hình thức sở hữu", value: "Sổ hồng sở hữu lâu dài" },
+    { key: 'Tên dự án', value: 'MT EASTMARKCITY', value_style: { fontWeight: 'bold', color: red[500] } },
+    { key: "Vị trí", value: "Vành đai 3 – Lò Lu, P. Long Trường, TP Thủ Đức, TP HCM" },
+    { key: "Chủ đầu tư", value: "Công ty TNHH Xây dựng và Kinh doanh nhà Điền Phúc Thành" },
+    { key: "Đơn vị phát triển", value: "Công ty Cổ Phần Đầu Tư Bất Động Sản Rio Land" },
+    { key: "Tổng thầu", value: "Phước Thành" },
+    { key: "Tổng diện tích đất", value: "Hơn 200.000 m2" },
+    { key: "Đất xây dựng nhà ở", value: "92.376,4 m2" },
+    { key: "Mật độ xây dựng", value: "25,6%" },
+    { key: "Quy mô", value: "07 block cao 14 – 22 tầng" },
+    { key: "Số lượng sản phẩm", value: "1.720 căn" },
+    { key: "Diện tích căn hộ", value: "63 – 65 – 70 – 73 – 95 – 99 – 134 – 199m2 từ 1-3PN" },
+    { key: "Tổng vốn đầu tư", value: "4500 tỷ" },
+    { key: "Thời gian khởi công", value: "Quý 4/2021" },
+    { key: "Thời gian bàn giao dự kiến", value: "Quý 4/2024" },
+    { key: "Pháp lý", value: "Sổ hồng sở hữu lâu dài (đã có GPXD)" },
 ]
 
 var utils_image = []
