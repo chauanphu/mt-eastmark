@@ -78,9 +78,7 @@ const HomePage = () => {
             <Navbar></Navbar>
 
             {/* Panel */}
-            <Container sx={{
-                minWidth: '100%',
-            }}>
+            <Container maxWidth='xl'>
                 <img src={panel} alt="Panel" width="100%" />
             </Container>
 
@@ -97,7 +95,7 @@ const HomePage = () => {
                 <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">GIỚI THIỆU TỔNG QUAN DỰ ÁN</Typography>
             </Box>
 
-            <Container sx={{ mt: 5 }}>
+            <Container maxWidth='xl' sx={{ mt: 5 }}>
                 <Stack>
                     <Grid container sx={{ borderBottom: 1, borderColor: grey[400], py: 2 }}>
                         <Grid item xs={4} sx={{ fontWeight: "bold" }}>Tên dự án</Grid>
@@ -126,7 +124,7 @@ const HomePage = () => {
                 <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">VỊ TRÍ ĐẮC ĐỊA</Typography>
             </Box>
 
-            <Container sx={{
+            <Container maxWidth='xl' sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',
@@ -201,7 +199,7 @@ const HomePage = () => {
                 <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">TIỆN ÍCH DỰ ÁN</Typography>
             </Box>
 
-            <Container sx={{
+            <Container maxWidth='xl' sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',
@@ -245,7 +243,7 @@ const HomePage = () => {
                 <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">MẶT BẰNG DỰ ÁN</Typography>
             </Box>
 
-            <Container sx={{
+            <Container maxWidth='xl' sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',
@@ -267,7 +265,7 @@ const HomePage = () => {
             }}>
                 <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">THANH TOÁN</Typography>
             </Box>
-            <Container sx={{
+            <Container maxWidth='xl' sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',
@@ -290,7 +288,7 @@ const HomePage = () => {
                 <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">HÌNH ẢNH THỰC TẾ
                 </Typography>
             </Box>
-            <Container sx={{
+            <Container maxWidth='xl' sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',
@@ -313,7 +311,7 @@ const HomePage = () => {
                 <Typography variant="h5" fontWeight="bold" fontFamily="Roboto">NHÀ MẪU
                 </Typography>
             </Box>
-            <Container sx={{
+            <Container maxWidth='xl' sx={{
                 width: { xs: "100%", md: "60%" },
                 display: 'flex',
                 alignItems: 'center',

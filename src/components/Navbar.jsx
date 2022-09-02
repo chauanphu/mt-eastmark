@@ -10,7 +10,7 @@ import logo from '../assets/logo-extended.png'
 import Dropdown from './Dropdown';
 
 const Navbar = () => {
-    const [tabvalue, setTab] = useState('0');
+    const [tabvalue, setTab] = useState('1');
     const [drawer, setDrawer] = useState(false)
     const theme = useTheme();
     const break_nav = useMediaQuery('(min-width: 1600px)')
@@ -31,12 +31,12 @@ const Navbar = () => {
 
     const tabs = [
         {
-            name: 'Giới thiệu', url: '#introduction', value: '0', style: style
+            name: 'Giới thiệu', url: '#introduction', value: '1', style: style
         },
         {
-            name: 'Vị trí', url: '#location', value: '1', style: style
+            name: 'Vị trí', url: '#location', value: '2', style: style
         }, {
-            name: 'Tiện ích', url: '#benefit', value: '2', style: style
+            name: 'Tiện ích', url: '#benefit', value: '3', style: style
         },
         {
             name: 'Mặt bằng', url: '#area', value: '4', style: style
@@ -85,8 +85,9 @@ const Navbar = () => {
                         width: 'fit-content',
                         display: {
                             xs: 'none',
-                            xl: 'block',
+                            xl: 'flex',
                         },
+                        alignItems: 'center',
                         position: 'absolute',
                         margin: 'auto',
                         left: 0,
