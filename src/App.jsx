@@ -11,7 +11,6 @@ const App = () => {
         <Route exact path="/" element={<HomePage />}>
         </Route>
         <Route path="*" element={<NotFoundPage />} />
-
       </Routes>
     </Router>
   );

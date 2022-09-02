@@ -43,7 +43,7 @@ const My_Modal = () => {
                 p: 4,
             }}>
                 <Typography fontFamily="Times New Roman" fontWeight="bold" sx={{ color: yellow[900], mb: 2, textAlign: 'center' }} variant="h4">Contact Form</Typography>
-
+                <Typography sx={{ mb: 2 }}>Hãy liên lạc với chúng tôi để nhận được sự tư vấn chi tiết hơn.</Typography>
                 <Form />
             </Box>
         </Modal>
