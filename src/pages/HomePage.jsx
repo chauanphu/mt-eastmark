@@ -78,7 +78,7 @@ const HomePage = () => {
             <Navbar></Navbar>
 
             {/* Panel */}
-            <Container maxWidth='xl'>
+            <Container sx={{ minWidth: '100%' }}>
                 <img src={panel} alt="Panel" width="100%" />
             </Container>
 

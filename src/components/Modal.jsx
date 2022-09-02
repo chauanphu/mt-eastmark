@@ -2,7 +2,7 @@ import { Typography, Box, Modal } from '@mui/material'
 import React, { useState, useEffect } from 'react'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
+import { yellow } from '@mui/material/colors';
 import Form from './Form';
 
 const My_Modal = () => {
@@ -42,7 +42,8 @@ const My_Modal = () => {
                 boxShadow: 24,
                 p: 4,
             }}>
-                <Typography sx={{ color: 'green', mb: 2, textAlign: 'center' }} variant="h4">Contact Form</Typography>
+                <Typography fontFamily="Times New Roman" fontWeight="bold" sx={{ color: yellow[900], mb: 2, textAlign: 'center' }} variant="h4">Contact Form</Typography>
+
                 <Form />
             </Box>
         </Modal>
