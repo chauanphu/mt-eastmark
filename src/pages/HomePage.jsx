@@ -19,7 +19,6 @@ import mat_bang_3 from '../assets/Mat_Bang_3.JPG'
 import payment from '../assets/payment.jpg'
 //////////////////////
 
-import FacebookIcon from '@mui/icons-material/Facebook';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 const introduction = [
@@ -192,13 +191,6 @@ const HomePage = () => {
                 display: "flex",
                 flexDirection: "column"
             }}>
-                <Fab color="primary" aria-label="add" sx={{ mb: 2 }}>
-                    <FacebookIcon onClick={() => {
-                        window.open(
-                            'https://www.facebook.com/profile.php?id=100010462383501'
-                        )
-                    }} />
-                </Fab>
                 <Fab component="a" href="tel:0909049996" aria-label="add" sx={{ mb: 2, color: 'white', backgroundColor: 'red' }}>
                     <LocalPhoneIcon />
                 </Fab>

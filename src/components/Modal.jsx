@@ -1,9 +1,17 @@
-import { Typography, Box, Modal } from '@mui/material'
+import { Typography, Box, Modal, Backdrop, Button } from '@mui/material'
 import React, { useState, useEffect } from 'react'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { yellow } from '@mui/material/colors';
 import Form from './Form';
+
+const Custom_Backdrop = () => {
+    return (<Backdrop
+        open={true}
+        sx={{ color: '#fff', zIndex: -1 }}>
+    </Backdrop>
+    )
+}
 
 const My_Modal = () => {
     const [modal, setShowModal] = useState(false)
@@ -29,6 +37,8 @@ const My_Modal = () => {
             onClose={() => { setOpen(true) }}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
+            BackdropComponent={Custom_Backdrop}
+
         >
             <Box sx={{
                 position: 'absolute',
@@ -45,8 +55,12 @@ const My_Modal = () => {
                 <Typography fontFamily="Times New Roman" fontWeight="bold" sx={{ color: yellow[900], mb: 2, textAlign: 'center' }} variant="h4">Contact Form</Typography>
                 <Typography sx={{ mb: 2 }}>Hãy liên lạc với chúng tôi để nhận được sự tư vấn chi tiết hơn.</Typography>
                 <Form />
+                <Box width="100%" sx={{ mt: 1 }} display='flex' justifyContent="center">
+                    <Button sx={{ color: 'red' }} onClick={() => { setOpen(true) }}>Hủy</Button>
+
+                </Box>
             </Box>
-        </Modal>
+        </Modal >
     )
 }
 
