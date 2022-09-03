@@ -62,7 +62,9 @@ const Navbar = () => {
                 backgroundColor: 'white',
                 position: 'sticky',
                 display: 'flex',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                opacity: 0.9,
+                mb: 1,
             }}>
                 {/* Logo */}
                 <IconButton size="large" onClick={event => toggleDrawer(event, true)} sx={{
